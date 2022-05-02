@@ -28,16 +28,14 @@ const reducer = (state = initState, { type, payload }) => {
       return {
         ...state,
         isLoading: false,
-        isError: true,
-      
+        isError: true,      
         products: [],
       };
     case GET_DATA:
       return {
         ...state,
         isLoading: false,
-        isError: false,
-        filterData: [],
+        isError: false,        
         products: payload,
       };
    
