@@ -19,23 +19,15 @@ export const Products = () => {
   return (
     <>
       <h2>Products</h2>
-      <Select data-testid="product-sort-order" onChange={handleSort}>
-        <option>Sort by--</option>
-        <option value="asc">Low to High</option>
-        <option value="desc">High to Low</option>
-      </Select>
-      {isLoading ? (
-        <h1>Loading....</h1>
-      ) : isError ? (
-        <h1>Error.. Something went wrong</h1>
-      ) : (
+  
+      
         <Grid data-testid="products-container">
           {/* iterate data and show each POroduct card */}
           {products.map((prod) => (
             <ProductCard key={prod.id} {...prod} />
           ))}
         </Grid>
-      )}
+     
     </>
   );
 };
